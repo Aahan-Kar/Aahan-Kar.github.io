@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 24px;
+}
+
+.gif-1 {
+  width: 60vw;
+  aspect-ratio: 16/9;
+  height: auto;
+  animation: slideUp 3.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.gif-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 120%;
+  object-fit: cover;
+  -webkit-filter: blur(100px);
+  filter: blur(100px);
+  z-index: -1;
+  animation: slideUp 3.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(130vh);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
